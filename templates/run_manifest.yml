@@ -1,0 +1,46 @@
+run_id:
+date:
+case_name:
+software:
+software_version:
+model_description:
+coordinate_system:
+
+input_files:
+  - path:
+    description:
+
+code_files:
+  - path:
+    description:
+
+parameters:
+  mining_height:
+  mining_width:
+  advance_step:
+  elastic_modulus:
+  cohesion:
+  friction_angle:
+  tensile_strength:
+  density:
+  notes:
+
+output_files:
+  - path:
+    description:
+    format:
+
+key_indicators:
+  max_subsidence:
+  max_horizontal_displacement:
+  influence_range:
+  boundary_deformation:
+  notes:
+
+analysis:
+  status: raw
+  report_path:
+  figure_paths: []
+  reviewer:
+  notes:
+

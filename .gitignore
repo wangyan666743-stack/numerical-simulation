@@ -1,0 +1,31 @@
+# System files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+~$*
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Large binary outputs that should be reviewed before committing
+*.sav
+*.f3sav
+*.flac3d
+*.vtk
+*.vtu
+*.vtp
+*.pvd
+
+# Local environments
+.venv/
+venv/
+env/
+
