@@ -1,3 +1,6 @@
+# 单次模拟运行清单模板
+# 建议复制到 runs/YYYYMMDD_简短名称/manifest.yml 后再填写。
+
 run_id:
 date:
 case_name:
@@ -43,4 +46,14 @@ analysis:
   figure_paths: []
   reviewer:
   notes:
+
+中文填写说明:
+  run_id: "本次运行编号，例如 20260528_base_case"
+  case_name: "工况名称，例如 基准工况、弹性模量敏感性分析"
+  model_description: "模型尺寸、边界条件、开采方案和主要假设"
+  coordinate_system: "坐标原点、坐标轴方向和高程基准"
+  parameters: "主要力学参数和开采参数"
+  output_files: "原始输出文件、处理后结果和图件路径"
+  key_indicators: "最大沉降、最大水平位移、影响范围、坝体边界变形等"
+  analysis_status: "raw=仅归档原始结果；processed=已整理数据；analyzed=已完成分析；verified=已核对"
 

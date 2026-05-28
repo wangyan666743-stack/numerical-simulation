@@ -1,41 +1,48 @@
-# Numerical Simulation Data Repository
+# 数值模拟数据管理仓库
 
-This repository is used to back up numerical simulation code, model outputs, processed results, and analysis notes for the thesis work.
+本仓库用于备份和管理硕士论文相关的数值模拟代码、原始输出结果、处理后数据、图表和分析记录。后续每完成一次模拟计算，都应将代码和结果按统一格式归档，便于追溯、对比和论文写作引用。
 
-## Directory Layout
+## 目录说明
 
-- `src/`: simulation source files and model scripts.
-- `scripts/analysis/`: reusable scripts for cleaning, plotting, and comparing results.
-- `data/raw/`: original output files copied directly from each simulation run.
-- `data/processed/`: cleaned tables, extracted indicators, and derived datasets.
-- `runs/`: one folder per simulation run, including code snapshot, raw outputs, and a run manifest.
-- `reports/`: analysis summaries, figures, and interpretation notes.
-- `docs/`: project notes, parameter definitions, and method documentation.
-- `metadata/`: run logs, data dictionaries, and index files.
-- `templates/`: reusable templates for future simulation archiving.
-- `notebooks/`: optional exploratory analysis notebooks.
+- `src/`：长期维护的模型代码、计算脚本和通用函数。
+- `scripts/analysis/`：数据清洗、指标提取、绘图和对比分析脚本。
+- `data/raw/`：从模拟软件直接导出的原始结果，不建议手工修改。
+- `data/processed/`：整理后的表格、提取指标和二次计算结果。
+- `runs/`：按单次模拟运行归档，每次运行单独建立一个文件夹。
+- `reports/`：阶段性分析报告、结果解释、图表说明和论文可用文字。
+- `docs/`：参数说明、模型说明、方法记录和项目备忘。
+- `metadata/`：运行记录表、数据字典和索引文件。
+- `templates/`：后续归档时可复用的模板。
+- `notebooks/`：可选的探索性分析笔记本。
 
-## Run Archiving Rule
+## 单次运行归档格式
 
-Each finished simulation should be saved as:
+每次模拟完成后，建议按下面的结构保存：
 
 ```text
-runs/YYYYMMDD_short-name/
-  manifest.yml
-  code/
-  raw/
-  processed/
-  figures/
-  notes.md
+runs/YYYYMMDD_简短名称/
+  manifest.yml      # 本次运行的参数、输入输出和分析状态
+  code/             # 本次运行使用的代码快照
+  raw/              # 本次运行的原始输出
+  processed/        # 本次运行整理后的数据
+  figures/          # 本次运行生成的图件
+  notes.md          # 本次运行的现象、问题和结论记录
 ```
 
-The `manifest.yml` file records the model version, parameter scheme, input files, output files, and analysis status. Raw results should not be manually edited; cleaned or extracted data should be placed under `processed/`.
+`manifest.yml` 用于记录软件版本、模型说明、参数方案、输入文件、输出文件和关键指标。原始结果放入 `raw/` 后不要直接修改；需要清洗、筛选或换算的数据另存到 `processed/`。
 
-## Recommended Workflow
+## 推荐工作流程
 
-1. Copy the finished simulation code and raw outputs into a new folder under `runs/`.
-2. Fill in `manifest.yml` from `templates/run_manifest.yml`.
-3. Extract key indicators into `data/processed/` or the run-level `processed/` folder.
-4. Add a short analysis note in `reports/` or the run-level `notes.md`.
-5. Commit and push the changes to GitHub as a permanent backup.
+1. 将本次模拟代码和原始输出复制到 `runs/YYYYMMDD_简短名称/`。
+2. 参考 `templates/run_manifest.yml` 填写本次运行清单。
+3. 将最大沉降、水平位移、影响范围、坝体边界变形等关键指标整理到 `processed/`。
+4. 将分析结论写入 `notes.md` 或 `reports/` 中的分析报告。
+5. 提交并推送到 GitHub，形成可追溯备份。
+
+## 命名建议
+
+- 运行文件夹：`YYYYMMDD_工况名称`，例如 `20260528_base_case`。
+- 原始数据：保留软件导出的原始文件名，必要时在外层文件夹说明来源。
+- 处理后数据：使用能反映内容的名称，例如 `max_subsidence.csv`、`dam_deformation_summary.xlsx`。
+- 图件：使用论文中可识别的名称，例如 `subsidence_contour.png`、`parameter_sensitivity.png`。
 

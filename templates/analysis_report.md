@@ -1,29 +1,33 @@
-# Analysis Report
+# 数值模拟结果分析报告
 
-## Basic Information
+## 基本信息
 
-- Run ID:
-- Case name:
-- Date:
-- Software/version:
+- 运行编号：
+- 工况名称：
+- 归档日期：
+- 软件及版本：
 
-## Model and Parameters
+## 模型与参数
 
-Describe the model geometry, boundary conditions, mining sequence, and key mechanical parameters.
+说明本次模拟的模型尺寸、边界条件、开采步骤、岩土体力学参数、弱胶结覆岩参数设置以及与上一轮模拟相比的变化。
 
-## Output Summary
+## 输出结果概述
 
-Summarize the raw output files and extracted indicators.
+说明本次模拟生成了哪些原始结果文件、处理后数据表和图件，并列出关键指标，例如最大沉降、最大水平位移、采动影响范围、坝体边界变形等。
 
-## Main Findings
+## 主要分析结论
 
-Record subsidence trend, deformation concentration area, parameter sensitivity, or comparison with measured data.
+围绕沉降盆地形态、最大沉降位置、变形集中区、推进过程中的迁移规律、参数敏感性以及与实测数据的差异进行分析。
 
-## Figures and Tables
+## 图表清单
 
-List generated figures and tables with file paths.
+记录本次分析使用或生成的图件、表格及其路径，便于后续写入论文。
 
-## Issues and Next Steps
+| 编号 | 图表名称 | 文件路径 | 用途 |
+| --- | --- | --- | --- |
+| 1 |  |  |  |
 
-Record abnormal results, missing files, or follow-up analysis tasks.
+## 异常问题与后续工作
+
+记录本次模拟中发现的异常现象、缺失数据、需要复核的参数，以及下一步需要补充的模拟或分析任务。
 
